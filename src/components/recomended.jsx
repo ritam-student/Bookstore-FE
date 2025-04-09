@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import BookCard from './bookcard';
 
 
@@ -75,8 +75,8 @@ const Recomended = () => {
                 modules={[ Navigation]}
                 className="mySwiper">
                     {
-                        books.length > 0 && books.splice(5,7).map((item) => (
-                            <SwiperSlide><BookCard  key={item._id}  book={item} /></SwiperSlide>
+                        books.length > 0 && books.splice(5,7).map((item , i) => (
+                            <SwiperSlide key={i}><BookCard  key={item._id}  book={item} /></SwiperSlide>
                         ))
                     }
     
